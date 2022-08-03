@@ -1,8 +1,6 @@
 import cv2
-import time
 import math as m
 import mediapipe as mp
-import numpy
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
@@ -121,9 +119,9 @@ if __name__ == "__main__":
         # Assist to align the camera to point at the side view of the person.
         # Offset threshold 30 is based on results obtained from analysis over 100 samples.
         if offset < 100:
-            image = drawText(image, str(int(offset)) + ' 对齐', (w - 150, 20), (0, 255, 127), 18)
+            image = drawText(image, '摄像头摆放准确', (w - 150, 20), (0, 255, 127), 18)
         else:
-            image = drawText(image, str(int(offset)) + ' 不对齐', (w - 150, 20), (255, 0, 0), 18)
+            image = drawText(image, ' 摄像头摆放不准确', (w - 150, 20), (255, 0, 0), 18)
             # cv2.putText(image, str(int(offset)) + ' Not Aligned', (w - 150, 30), font, 0.9, red, 2)
 
         # Calculate angles.
