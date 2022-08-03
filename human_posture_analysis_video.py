@@ -191,7 +191,7 @@ if __name__ == "__main__":
         if bad_time > 180:
             sendWarning()
 
-        logo = cv2.imread('logo.png')
+        logo = cv2.imread('./logo.png')
         width = 123 * 2
         height = int(width / 4.3)
         logo = cv2.resize(logo, (width, height))
